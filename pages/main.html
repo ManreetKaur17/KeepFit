@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Main Page</title>
+    <meta name="project boilerplate code" content="personal project">
+    <meta name="author" content="BCIT">
+
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!----------------------------------------------->
+    <!-- CSS: Bootstrap, Firebase, other API -->
+    <!----------------------------------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+   
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+    <link rel="stylesheet" href="../styles/main.css">
+
+</head>
+<body>
+    <!----------------------->
+    <!--  HTML Section -->
+    <!----------------------->
+
+    <!--Nav bar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a href="main.html" class="navbar-brand">
+            <img src="images/logo.svg" height="28" alt="Fitness">
+        </a>
+        <a href="main.html" class="navbar-brand">Fitness</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="main.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Exercises</a>
+                    <div class="dropdown-menu">
+                        <a href="exercise.html?category=aerobic" class="dropdown-item">Aerobic</a>
+                        <a href="exercise.html?category=strength" class="dropdown-item">Strength</a>
+                        <a href="exercise.html?category=stretching" class="dropdown-item">Stretching</a>
+                        <a href="exercise.html?category=balance" class="dropdown-item">Balance</a>
+                    </div>
+                </div>
+                <a href="post.html" class="nav-item nav-link">Post</a>
+                <a href="#" class="nav-item nav-link">About</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a href="profile.html" class="nav-item nav-link">Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Hello, world!</h1>
+    <h1>This is my awesome app</h1>
+
+    <div class="container">
+
+        <video width="320" height="240" controls>
+            <source src="https://firebasestorage.googleapis.com/v0/b/personal-project-fdee9.appspot.com/o/exercises%2FWIN_20200701_00_59_24_Pro.mp4?alt=media&token=89c15bcc-3ff6-48a8-8f82-fc17bf2fdc19" type="video/mp4">
+            <source src="https://firebasestorage.googleapis.com/v0/b/personal-project-fdee9.appspot.com/o/exercises%2FWIN_20200701_00_59_24_Pro.mp4?alt=media&token=89c15bcc-3ff6-48a8-8f82-fc17bf2fdc19" type="video/ogg">
+          Your browser does not support the video tag.
+          </video>
+
+
+    <!--    <img id="myImg" height="600" width="600" src="https://firebasestorage.googleapis.com/v0/b/personal-project-fdee9.appspot.com/o/exercises%2FWIN_20200701_00_59_24_Pro.mp4?alt=media&token=89c15bcc-3ff6-48a8-8f82-fc17bf2fdc19">
+    -->
+    </div>
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="../scripts/firebase.js"> </script>
+  
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+    <script src="../scripts/main.js"></script>
+
+    <!--------------------------------------------------------------------->
+    <!-- Make calls to your own JavaScript functions, here below-->
+    <!---------------------------------------------------------------------->
+
+
+</body>
+</html>
