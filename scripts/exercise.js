@@ -22,7 +22,7 @@ db.collection("exercises").where("category", "==", category)
         console.log("Name: " + `${myDoc.name}`);
 
         let myHtml = `
-        <h7>exercise List</h7>
+        <br>
         <a href="individualEx.html?individual=${doc.id}">
             <div class="card" style="max-width: 1000px;">
                 <div class="row no-gutters">

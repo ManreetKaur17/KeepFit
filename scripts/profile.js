@@ -153,6 +153,7 @@ function showProfile() {
                 })
                 .then(function() {
                     console.log("Successfully updated");
+                    window.alert("Successfully updated");
                 })
                 .catch(function(error) {
                     console.log("Error in updating data: " + error);

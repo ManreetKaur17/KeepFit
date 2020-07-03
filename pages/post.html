@@ -44,10 +44,10 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Exercises</a>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Aerobic</a>
-                        <a href="#" class="dropdown-item">Strength</a>
-                        <a href="#" class="dropdown-item">Stretching</a>
-                        <a href="#" class="dropdown-item">Balance</a>
+                        <a href="exercise.html?category=aerobic" class="dropdown-item">Aerobic</a>
+                        <a href="exercise.html?category=strength" class="dropdown-item">Strength</a>
+                        <a href="exercise.html?category=stretching" class="dropdown-item">Stretching</a>
+                        <a href="exercise.html?category=balance" class="dropdown-item">Balance</a>
                     </div>
                 </div>
                 <a href="post.html" class="nav-item nav-link">Post</a>
@@ -128,15 +128,18 @@
             <div class="col-sm-10">
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="customFile">
-                    <label class="custom-file-label" for="customFile">Choose file</label>
-                </div>
+                    <br>
+                    <label class="custom-file-label" for="customFile" id="chooseFile">Choose File</label>
+                </div><br>
             </div>
         </div>
 
+
         <div class="form-group row">
             <div class="col-sm-10 offset-sm-2">
-                <button type="reset" class="btn btn-danger">Reset</button>
+                <button type="reset" id="reset" onclick="resetFile()" class="btn btn-danger">Reset</button>
                 <button type="button" id="post" class="btn btn-success">Post</button>
+                <h7 id="myProgress"></h7>
             </div>
         </div>
     </form>
