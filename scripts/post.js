@@ -2,6 +2,7 @@ function postExercise() {
     console.log("in post");
     console.log("Posting your exercise");
 
+
     let name = document.getElementById("inputName").value;
     console.log(name);
 
@@ -43,6 +44,9 @@ function postExercise() {
     }
     else {
 
+        document.getElementById("post").innerHTML = `
+        <span class="spinner-border spinner-border-sm"></span> Posting...`;
+
         console.log("Posting your excercise... please wait");
     document.getElementById("myProgress").innerHTML = " Posting your excercise... please wait";
 
@@ -81,6 +85,7 @@ function postExercise() {
                 document.getElementById("myProgress").innerHTML = " Exercise successfully posted";
                // alert("success");
                 console.log("Success in adding document " + docRef);
+                document.getElementById("post").innerHTML = "Post";
             })
             .catch(function(error) {
                 alert("Fail");
@@ -126,3 +131,8 @@ $('#customFile').on('change', function(event) {
         console.log(error);
     })  */  
 })   
+
+
+function resetFile() {
+    document.getElementById("chooseFile").innerHTML = "Choose file";
+}

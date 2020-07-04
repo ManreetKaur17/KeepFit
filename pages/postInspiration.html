@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Post Page</title>
+    <title>Post Inspiration</title>
     <meta name="project boilerplate code" content="personal project">
     <meta name="author" content="BCIT">
 
@@ -20,7 +20,7 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="../styles/post.css">
+    <link rel="stylesheet" href="../styles/postInspiration.css">
 
 </head>
 <body>
@@ -51,6 +51,7 @@
                     </div>
                 </div>
                 <a href="post.html" class="nav-item nav-link">Post</a>
+                <a href="inspiration.html" class="nav-item nav-link">Inspiration</a>
                 <a href="#" class="nav-item nav-link">About</a>
             </div>
             <div class="navbar-nav ml-auto">
@@ -59,95 +60,50 @@
         </div>
     </nav>
 
+    
 
     <div class="container">
-    
-    <br>
-    <h1>Enter details of exercise to post</h1>
-    <hr>
-    <br>
-
-    <form>
-        <div class="form-group row">
-            <label for="inputName" class="col-sm-2 col-form-label">Name</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputName" placeholder="Name">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="inputCategory" class="col-sm-2 col-form-label">Category</label>
-            <div class="col-sm-10">
-                <select class="custom-select" id="inputCategory">
-                    <option selected>Select category</option>
-                    <option value="aerobic">Aerobic Exercise</option>
-                    <option value="strength">Strength Training</option>
-                    <option value="stretching">Stretching</option>
-                    <option value="balance">Balance Exercise</option>
-                </select>
-            </div>
-        </div>
+        <h1>Hello, world!</h1>
+        <h1>Post an inspirational picture</h1>
+        <br>
+    <!--    <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>      -->
         
-        <div class="form-group row">
-            <label for="inputMuscle" class="col-sm-2 col-form-label">Target Muscle/Body Part</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputMuscle" placeholder="Target Muscle/Body Part">
+        
+
+        <form id="myForm">
+            <div class="form-group row">
+                <label for="inputFile" class="col-sm-2 col-form-label">Select an image</label>
+                <div class="col-sm-10">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile" id="chooseFile">Choose File</label>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <label for="inputSteps" class="col-sm-2 col-form-label">Steps</label>
-            <div class="col-sm-10">
-                <textarea name="steps" class="form-control" rows="7" id="inputSteps" placeholder="Steps"></textarea>
+            <img src="../images/imageIcon.png" id="myImage" height="180" width="180">
+            <br>
+            <div class="form-group row">
+                <label for="inputCaption" class="col-sm-2 col-form-label">Add a caption</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputCaption" placeholder="Caption">
+                </div>
             </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="inputRepetition" class="col-sm-2 col-form-label">Repetition</label>
-            <div class="col-sm-10">
-                <input type="number" min="0" class="form-control" id="inputRepetition" placeholder="0">
+            
+            <div id="postDiv">
+                <button type="button" id="postBtn" class="btn btn-primary">Post</button>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <label for="inputSets" class="col-sm-2 col-form-label">Sets</label>
-            <div class="col-sm-10">
-                <input type="number" min="0" class="form-control" id="inputSets" placeholder="0">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="inputRest" class="col-sm-2 col-form-label">Rest Period</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputRest" placeholder="Period">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="inputFile" class="col-sm-2 col-form-label">Video</label>
-            <div class="col-sm-10">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="customFile">
-                    <br>
-                    <label class="custom-file-label" for="customFile" id="chooseFile">Choose File</label>
-                </div><br>
-            </div>
-        </div>
-
-
-        <div class="form-group row">
-            <div class="col-sm-10 offset-sm-2">
-                <button type="reset" id="reset" onclick="resetFile()" class="btn btn-danger">Reset</button>
-                <button type="button" id="post" class="btn btn-success">Post</button>
-                <h7 id="myProgress"></h7>
-            </div>
-        </div>    
-
-    </form>
+        </form>
 
     </div>
 
+
     
+
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -166,13 +122,13 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script src="../scripts/post.js"></script>
+    <script src="../scripts/postInspiration.js"></script>
 
     <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
     <script>
-        document.getElementById("post").onclick = postExercise;
+        document.getElementById("postBtn").onclick = postIns;
     </script>
 
 </body>
