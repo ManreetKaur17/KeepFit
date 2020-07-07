@@ -1,42 +1,27 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Main Page</title>
-    <meta name="project boilerplate code" content="personal project">
-    <meta name="author" content="BCIT">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-    <!----------------------------------------------->
-    <!--  Meta tag for rendering on mobile devices -->
-    <!----------------------------------------------->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!--------------------Favicon-------------------->
-    <link rel="shortcut icon" type="image/jpg" href="../images/logo.png"/>
-    
-    <!----------------------------------------------->
-    <!-- CSS: Bootstrap, Firebase, other API -->
-    <!----------------------------------------------->
+    <!--Bootstrap cdn link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-   
-    <!------------------------>
-    <!-- Your own CSS files -->
-    <!------------------------>
-    <link rel="stylesheet" href="../styles/main.css">
+
+    <!--Own css file-->
+    <link rel="stylesheet" href="../styles/map.css">
 
 </head>
-<body style="background-color: slategray;">
-    <!----------------------->
-    <!--  HTML Section -->
-    <!----------------------->
 
-    <!----Nav bar---->
+<body>
+    <!--Nav bar-->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a href="main.html" class="navbar-brand">
-            <img src="../images/logo.png" height="28" alt="Logo">
+            <img src="images/logo.svg" height="28" alt="Fitness">
         </a>
-        <a href="main.html" class="navbar-brand">KeepFit</a>
+        <a href="main.html" class="navbar-brand">Fitness</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,8 +40,7 @@
                 </div>
                 <a href="post.html" class="nav-item nav-link">Post</a>
                 <a href="inspiration.html" class="nav-item nav-link">Inspiration</a>
-                <a href="map.html" class="nav-item nav-link">Park/Gym</a>
-                <a href="map.html" class="nav-item nav-link">BMI</a>
+                <a href="udacityMaps1.html" class="nav-item nav-link">Park/Gym</a>
                 <a href="#" class="nav-item nav-link">About</a>
             </div>
             <div class="navbar-nav ml-auto">
@@ -65,12 +49,34 @@
         </div>
     </nav>
 
-    <h1>Hello, world!</h1>
-    <h1>This is my awesome app</h1>
+    <br>
 
     <div class="container">
+        <div id="buttonDiv">
+            <button type="button" class="btn btn-primary" id="parks" onclick="searchArea('park')">Parks</button>
+            <button type="button" class="btn btn-primary" id="gyms" onclick="searchArea('gym')">Gyms</button>
+        </span>
 
+        <div>
+            <h3 id="typeHeading">Parks</h3>
+           
+            <div id="selectDiv">
+                <select class="custom-select" id="distanceSelect" onchange="changeDistance()">
+                    <option value="1">Within 1 kilometer</option>
+                    <option value="2" selected>Within 2 kilometer</option>
+                    <option value="3">Within 3 kilometer</option>
+                    <option value="5">Within 5 kilometer</option>
+                    <option value="10">Within 10 kilometer</option>
+                </select>
+            </div>
+        </div>
+        
     </div>
+
+    <br>
+
+    <div class="container" id="map"></div>
+    <br>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -84,16 +90,19 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <script src="../scripts/firebase.js"> </script>
-  
-    <!--------------------------------------------------------------------->
-    <!-- JS files: Your own JavaScript functions included here    -->
-    <!--------------------------------------------------------------------->
-    <script src="../scripts/main.js"></script>
 
-    <!--------------------------------------------------------------------->
-    <!-- Make calls to your own JavaScript functions, here below-->
-    <!---------------------------------------------------------------------->
+    <!--Bootstrap cdn
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    -->
 
+    <!--Javascript file-->
+    <script src="../scripts/map.js"></script>
 
+    <!--Uncomment this for map working-->
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoPfCZQBCf0j0RHJ8MJ1n91JAPwsqnpzE&callback=initMap&libraries=places">
+    </script>       
 </body>
+
 </html>

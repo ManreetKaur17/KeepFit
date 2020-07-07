@@ -1,0 +1,12 @@
+#map {
+    height: 100%;
+}
+#distanceSelect {
+    width: 200px;
+}
+#buttonDiv {
+    text-align: center;
+}
+#selectDiv { 
+    text-align: end;
+}
