@@ -22,11 +22,10 @@ db.collection("exercises").where("category", "==", category)
         console.log("Name: " + `${myDoc.name}`);
 
         let myHtml = `
-        <br>
         <a href="individualEx.html?individual=${doc.id}">
-            <div class="card" style="max-width: 1000px;">
+            <div class="card" id="oneEx">
                 <div class="row no-gutters">
-                    <div class="col-sm-5" style="background: whitesmoke;">
+                    <div class="col-sm-5">
 
                         <video class="card-img-top h-100" controls>
                             <source class="card-img-top h-100" src="${myDoc.videoUrl}" type="video/mp4">
@@ -44,6 +43,7 @@ db.collection("exercises").where("category", "==", category)
                 </div>
             </div>
         </a>
+        <br>
         `;
 
         $('#exerciseList').append(myHtml);

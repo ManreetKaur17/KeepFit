@@ -26,12 +26,11 @@ function showProfile() {
             }
 
 
-            
+            document.getElementById("name").innerHTML = myUser.name;            
 
 
             let data =
-            `<h4>Name: ${myUser.name}</h4>
-             <h4>Email: ${myUser.email}</h4>
+            `
              <form>
                 <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Name</label>
@@ -86,7 +85,7 @@ function showProfile() {
                     </div>
                 </div>
 
-                <div class="form-group row">
+            <!--    <div class="form-group row">
                     <label for="inputTrainer" class="col-sm-2 col-form-label">Wanna be a Personal Trainer</label>
                     <div class="col-sm-10">
                         <div class="custom-control custom-switch">
@@ -94,9 +93,13 @@ function showProfile() {
                             <label class="custom-control-label" for="trainer">Turn on</label>
                         </div>
                     </div>
-                </div>
+                </div>    -->
 
-                <button type="button" id="update" class="btn btn-success">Update</button>
+                <div class="form-group row">
+                    <div class="col-sm-10 offset-sm-2">
+                        <button type="button" id="update" class="btn btn-success">Update</button>
+                    </div>
+                </div>    
 
              </form>
 

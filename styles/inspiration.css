@@ -1,6 +1,21 @@
+body {
+    background-color: rgb(56,56,56);
+}
+
+#outerDiv {
+    color: white;
+}
+
+#myHead {
+    color: rgb(0,255,255);
+}
 
 #postHeading {
     text-align: end;
+}
+
+#posted {
+    color: grey;
 }
 
 @media (min-width: 770px) {

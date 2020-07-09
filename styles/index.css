@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(56,56,56);
+}
+
+
+
+#myDiv {
+    margin: auto;
+    border: solid cyan 2px;
+    padding: 10px;
+    width: 50%;
+    background-color: rgb(112,112,112);
+    color: white;
+}
+
+@media (max-width: 770px) {
+    #myDiv {
+        width: 100%;
+    }
+}
+
+
+#loginBtn {
+    margin: auto;
+    display: block;
+    border: solid cyan 2px;
+}

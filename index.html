@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Main Page</title>
+    <title>Index</title>
     <meta name="project boilerplate code" content="personal project">
     <meta name="author" content="BCIT">
 
@@ -23,7 +23,7 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
 
 </head>
 <body>
@@ -34,49 +34,28 @@
     <!----Nav bar---->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a href="main.html" class="navbar-brand">
-            <img src="../images/logo.png" height="28" alt="Logo">
+            <img src="images/logo.png" height="28" alt="Logo">
         </a>
         <a href="main.html" class="navbar-brand">KeepFit</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-    
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav">
-                <a href="main.html" class="nav-item nav-link active">Home</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Exercises</a>
-                    <div class="dropdown-menu">
-                        <a href="exercise.html?category=aerobic" class="dropdown-item">Aerobic</a>
-                        <a href="exercise.html?category=strength" class="dropdown-item">Strength</a>
-                        <a href="exercise.html?category=stretching" class="dropdown-item">Stretching</a>
-                        <a href="exercise.html?category=balance" class="dropdown-item">Balance</a>
-                    </div>
-                </div>
-                <a href="post.html" class="nav-item nav-link">Post</a>
-                <a href="inspiration.html" class="nav-item nav-link">Inspiration</a>
-                <a href="map.html" class="nav-item nav-link">Park/Gym</a>
-                <a href="bmi.html" class="nav-item nav-link">BMI</a>
-                <a href="#" class="nav-item nav-link">About</a>
-            </div>
-            <div class="navbar-nav ml-auto">
-                <a href="profile.html" class="nav-item nav-link">Profile</a>
-            </div>
-        </div>
     </nav>
 
-    <h1 id="myHead">
-        You are here
-    </h1>
+    <br><br><br>
 
-    <br>
-    <div class="container" id="myDiv">
-        <h1>This is my awesome app</h1>
+    <div class="container" id="outerDiv"> 
+      <div id="myDiv">
+        <h3>Welcome to KeepFit</h3>
+        <h4>Please login</h4>
+        <div id="BtnDiv">
+          <a href="pages/login.html">
+            <button type="button" class="btn btn-primary" id="loginBtn">Login</button>
+          </a>
+        </div>
+      </div>
     </div>
-
-    <div class="container">
-
-    </div>
+    
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -94,7 +73,7 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script src="../scripts/main.js"></script>
+    
 
     <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->

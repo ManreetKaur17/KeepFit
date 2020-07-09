@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(56,56,56);
+    color: white;
+}
+
+#outerDiv {
+    text-align: center;
+}
+
+#name {
+    color: rgb(0,255,255);
+}

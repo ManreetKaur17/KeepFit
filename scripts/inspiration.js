@@ -17,7 +17,7 @@ function showPosts() {
 
                 let myHtml = `
                 <div>
-                    <h5>${userName}</h5>
+                    <h5><b>${userName}</b> <small id="posted">Posted</small></h5>
                     <img width="90%" height="90%" src="${myDoc.videoUrl}"> 
                     <h5>${myDoc.caption}</h5>
                 

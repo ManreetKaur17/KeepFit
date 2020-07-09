@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(56,56,56);
+}
+
 #map {
     height: 100%;
 }
@@ -9,4 +13,8 @@
 }
 #selectDiv { 
     text-align: end;
+}
+
+#typeHeading {
+    color: white;
 }
