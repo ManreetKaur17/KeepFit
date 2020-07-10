@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Main Page</title>
@@ -12,20 +13,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--------------------Favicon-------------------->
-    <link rel="shortcut icon" type="image/jpg" href="../images/logo.png"/>
-    
+    <link rel="shortcut icon" type="image/jpg" href="../images/logo.png" />
+
     <!----------------------------------------------->
     <!-- CSS: Bootstrap, Firebase, other API -->
     <!----------------------------------------------->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-   
+
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="../styles/main.css">
 
 </head>
+
 <body>
     <!----------------------->
     <!--  HTML Section -->
@@ -40,7 +43,7 @@
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-    
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
                 <a href="main.html" class="nav-item nav-link active">Home</a>
@@ -57,7 +60,7 @@
                 <a href="inspiration.html" class="nav-item nav-link">Inspiration</a>
                 <a href="map.html" class="nav-item nav-link">Park/Gym</a>
                 <a href="bmi.html" class="nav-item nav-link">BMI</a>
-                <a href="#" class="nav-item nav-link">About</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
             </div>
             <div class="navbar-nav ml-auto">
                 <a href="profile.html" class="nav-item nav-link">Profile</a>
@@ -65,32 +68,135 @@
         </div>
     </nav>
 
-    <h1 id="myHead">
-        You are here
-    </h1>
+    <!-- Slide Show -->
+    <section>
+        <img class="mySlides" src="../images/foot2.jpg">
+        <img class="mySlides" src="../images/kick.jpg">
+        <img class="mySlides" src="../images/hands2.jpg">
+        <div id="textDiv">
+            <h1 style="font-size: 10vw; color: cyan;">KeepFit</h1>
+            <h1 style="font-size: 7vw;">Be the best version of <span style="color: cyan;">yourself</span></h1>
+        </div>
+        
+        
+    </section>
 
-    <br>
-    <div class="container" id="myDiv">
-        <h1>This is my awesome app</h1>
+    <br><br>
+    <div class="container" id="keepfitDiv">
+        <div id="headingDiv">
+            <h1 style="color: cyan;">KeepFit</h1>
+            <h3 style="font-weight: lighter;">The fitness app</h3>
+        </div>
+        <br>
+        <h5 style="font-weight: normal;">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h5>
     </div>
 
-    <div class="container">
+    <br><br>
+    <div class="container" id="features">
+        <div class="white" id="exploreDiv">
+            <h1 style="font-weight: normal;">Explore KeepFit</h1>
+        </div>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-md-4 white featureBack">
+                <h2><span style="color: cyan;">Exercises</span> for you</h2>
+                <p>Choose category</p>
+                
+                <div class="btnDiv">
+                    <a href="exercise.html?category=aerobic" style="color: cyan;">
+                        <h5 class="myBtn" style="font-weight: normal;">Aerobic</h5>
+                    </a>
+                    <a href="exercise.html?category=strength" style="color: cyan;">
+                        <h5 class="myBtn" style="font-weight: normal;">Strength</h5>
+                    </a>
+                    <a href="exercise.html?category=stretching" style="color: cyan;">
+                        <h5 class="myBtn" style="font-weight: normal;">Stretching</h5>
+                    </a>
+                    <a href="exercise.html?category=balance" style="color: cyan;">
+                        <h5 class="myBtn" style="font-weight: normal;">Balance</h5>
+                    </a>
+                </div>
+                <br>
+            </div>
+            
+            <div class="col-md-4 white">
+                <h2>Get <span style="color: cyan;">Inspiration</span></h2>
+                <p>Not feel like exercising</p>
+                <p>Check this out!</p>
+                <p>You will definitely get inspired to workout</p>
+                <div class="btnDiv">
+                    <a href="inspiration.html">
+                        <button type="button" id="myBtn" class="btn btn-primary">Inspiration</button>
+                    </a>
+                </div>
+                <br>
+            </div>
+            
+            <div class="col-md-4 white">
+                <h2>Nearby <span style="color: cyan;">Parks/Gyms</span></h2>
+                <p>Wanna go out to workout</p>
+                <p>Parks and gyms near you</p>
+                <p>Find the right place</p>
+                <div class="btnDiv">
+                    <a href="inspiration.html">
+                        <button type="button" id="myBtn" class="btn btn-primary">Park/Gym</button>
+                    </a>
+                </div>
+            </div>
+            <br>
+        </div>  
 
     </div>
+
+    
+
+ <!--   <footer style="background-color: violet;">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Copyright &copy; 2019 Tutorial Republic</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <a href="#" class="text-dark">Terms of Use</a> 
+                <span class="text-muted mx-2">|</span> 
+                <a href="#" class="text-dark">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>   -->
+
+
+    <br><br>
+    <footer id="myFooter">
+        <a href="about.html" style="color: white;">
+            <h6 style="font-weight: normal;">About Us</h6>
+        </a>
+    </footer>    
+
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <script src="../scripts/firebase.js"> </script>
-  
+
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
@@ -102,4 +208,5 @@
 
 
 </body>
+
 </html>

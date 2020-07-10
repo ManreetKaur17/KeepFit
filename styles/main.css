@@ -9,3 +9,64 @@ body {
 #myHead {
     color: whitesmoke;
 }
+
+.mySlides {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    position: relative;
+}
+
+#textDiv {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 20%;
+    width: 80%;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#keepfitDiv {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#headingDiv {
+    text-align: center;
+}
+
+#myFooter {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+#exploreDiv {
+    color: cyan;
+    text-align: center;
+}
+
+.white {
+    color: white;
+}
+
+hr {
+    background-color: white;
+}
+
+.btnDiv {
+    text-align: center;
+}
+
+#myBtn {
+    background-color: cyan;
+    color: black;
+}
