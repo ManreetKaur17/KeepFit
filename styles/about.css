@@ -2,6 +2,12 @@ body {
     background-color: rgb(56,56,56);
 }
 
-#outerDiv {
+#headingDiv {
     color: white;
+    text-align: center;
 }
+
+#myName {
+    color: cyan;
+}
+
