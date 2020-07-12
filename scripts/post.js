@@ -83,9 +83,11 @@ function postExercise() {
             })
             .then(function(docRef) {
                 document.getElementById("myProgress").innerHTML = " Exercise successfully posted";
-               // alert("success");
+                window.alert("Exercise successfully posted");
                 console.log("Success in adding document " + docRef);
                 document.getElementById("post").innerHTML = "Post";
+             //   document.getElementById("myForm").reset();
+                window.location.reload();
             })
             .catch(function(error) {
                 alert("Fail");

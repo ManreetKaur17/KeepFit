@@ -10,7 +10,7 @@ console.log(category);                         // right
 categoryFinal = category.substring(0, 1).toUpperCase() + category.substring(1);
 console.log(categoryFinal); 
 
-$('#heading').append(`<h2>${categoryFinal} category</h2>`);
+$('#categoryDiv').append(`<h2>${categoryFinal} category</h2>`);
 
 db.collection("exercises").where("category", "==", category)
 .get()

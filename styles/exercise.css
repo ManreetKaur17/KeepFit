@@ -15,3 +15,8 @@ body {
     background-color: rgb(240,240,240);
     border: solid rgb(51,102,187) 3px;
 }
+
+#categoryDiv {
+    color:white;
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(56,56,56);
+}
+
+#myExercise {
+    color: cyan;
+}
+
+#heading {
+    text-align: center;
+}
+
+#white {
+    color: white;
+    font-weight: normal;
+}

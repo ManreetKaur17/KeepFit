@@ -19,17 +19,21 @@ function showIndividualEx() {
 
         let myHtml =
         `
-        <h4>Name: ${exDoc.name}</h4>
+        <div id="heading">
+            <h1 id="name">${exDoc.name}</h1>
+        </div>
+        <br>
         <video class="card-img-top h-100" controls>
             <source src="${exDoc.videoUrl}" type="video/mp4">
             <source src="${exDoc.videoUrl}" type="video/ogg">
             Your browser does not support the video tag.
         </video>
-        <h6>Target Muscle/Body Part: ${exDoc.targetMuscle}</h6>
-        <h6>Steps: ${exDoc.steps}</h6>
-        <h6>Repetition: ${exDoc.repetition}</h6>
-        <h6>Sets: ${exDoc.sets}</h6>
-        <h6>Rest Period: ${exDoc.rest}</h6>
+        <br><br>
+        <h5>Target Muscle/Body Part :  <span id="white">${exDoc.targetMuscle}</span></h5>
+        <h5>Steps :  <span id="white">${exDoc.steps}</span></h5>
+        <h5>Repetition :  <span id="white">${exDoc.repetition}</span></h5>
+        <h5>Sets :  <span id="white">${exDoc.sets}</span></h5>
+        <h5>Rest Period :  <span id="white">${exDoc.rest}</span></h5><br>
         `;
 
         $('#myExercise').append(myHtml);
