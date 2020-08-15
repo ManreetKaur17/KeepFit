@@ -1,36 +1,34 @@
 function showProfile() {
 
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function (user) {
 
         db.collection("users").doc(user.uid)
-        .get()
-        .then(function(doc) {
-            let myUser = doc.data();
-            console.log(myUser.email);
-            console.log(myUser.name);
+            .get()
+            .then(function (doc) {
+                let myUser = doc.data();
 
-            let age = 0;
-            console.log(typeof(myUser.age) == "undefined");
-            if(typeof(myUser.age) != "undefined") {
-                age = myUser.age;
-            }
+                let age = 0;
 
-            let height = 100;
-            if(typeof(myUser.height) != "undefined") {
-                height = myUser.height;
-            }
+                if (typeof (myUser.age) != "undefined") {
+                    age = myUser.age;
+                }
 
-            let weight = 50;
-            if(typeof(myUser.weight) != "undefined") {
-                weight = myUser.weight;
-            }
+                let height = 100;
+                if (typeof (myUser.height) != "undefined") {
+                    height = myUser.height;
+                }
+
+                let weight = 50;
+                if (typeof (myUser.weight) != "undefined") {
+                    weight = myUser.weight;
+                }
 
 
-            document.getElementById("name").innerHTML = myUser.name;            
+                document.getElementById("name").innerHTML = myUser.name;
 
 
-            let data =
-            `
+                let data =
+                    `
              <form>
                 <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Name</label>
@@ -85,16 +83,6 @@ function showProfile() {
                     </div>
                 </div>
 
-            <!--    <div class="form-group row">
-                    <label for="inputTrainer" class="col-sm-2 col-form-label">Wanna be a Personal Trainer</label>
-                    <div class="col-sm-10">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="trainer">
-                            <label class="custom-control-label" for="trainer">Turn on</label>
-                        </div>
-                    </div>
-                </div>    -->
-
                 <div class="form-group row">
                     <div class="col-sm-10 offset-sm-2">
                         <button type="button" id="update" class="btn btn-success">Update</button>
@@ -105,72 +93,53 @@ function showProfile() {
 
              `;
 
-            $('#profileData').append(data);
+                $('#profileData').append(data);
 
-            if(typeof(myUser.gender) != "undefined") {
-                console.log("gender is not undefined");
-                if(myUser.gender == "male") {
-                    document.getElementById('male').checked = true;
-                } else if (myUser.gender == "female") {
-                    document.getElementById('female').checked = true;
-                } else {
-                    document.getElementById('other').checked = true;
+                if (typeof (myUser.gender) != "undefined") {
+
+                    if (myUser.gender == "male") {
+                        document.getElementById('male').checked = true;
+                    } else if (myUser.gender == "female") {
+                        document.getElementById('female').checked = true;
+                    } else {
+                        document.getElementById('other').checked = true;
+                    }
+
                 }
-                console.log("gender is not undefined 2222");
-            }
 
-            if(typeof(myUser.personalTrainer) != "undefined") {
-                console.log("Trainer is not undefined");
-                if(myUser.personalTrainer == "yes") {
-                    document.getElementById('trainer').checked = true;
+
+                document.getElementById('update').onclick = updateFun;
+
+                function updateFun() {
+
+                    let myGender = "male";
+                    if (document.getElementById('female').checked == true) {
+                        myGender = "female"; // add to database on clicking update button
+                    } else if (document.getElementById('other').checked == true) {
+                        myGender = "other";
+                    }
+
+                    db.collection("users").doc(user.uid)
+                        .set({
+                            name: document.getElementById('inputName').value,
+                            email: document.getElementById('inputEmail').value,
+                            age: document.getElementById('inputAge').value,
+                            height: document.getElementById('inputHeight').value,
+                            weight: document.getElementById('inputWeight').value,
+                            gender: `${myGender}`,
+                        })
+                        .then(function () {
+                            window.alert("Successfully updated");
+                            document.getElementById("name").innerHTML = document.getElementById('inputName').value;
+                        })
+                        .catch(function (error) {
+                            console.log("Error in updating data: " + error);
+                        });
                 }
-            }
 
-            document.getElementById('update').onclick = updateFun;
-
-            function updateFun() {
-
-                let myGender = "male";
-            if(document.getElementById('female').checked == true) {
-                myGender = "female";                        // add to database on clicking update button
-            } else if (document.getElementById('other').checked == true) {
-                myGender = "other";
-            }
-
-        /*    let pTrainer = "no";
-            if(document.getElementById('trainer').checked == true) {
-                console.log("Trainer yes");
-                pTrainer = "yes";
-            }   */
-
-                console.log("in updateFun");
-                db.collection("users").doc(user.uid)
-                .set({
-                    name: document.getElementById('inputName').value,
-                    email: document.getElementById('inputEmail').value,
-                    age: document.getElementById('inputAge').value,
-                    height: document.getElementById('inputHeight').value,
-                    weight: document.getElementById('inputWeight').value,
-                    gender: `${myGender}`,
-                 //   personalTrainer: `${pTrainer}`
-                })
-                .then(function() {
-                    console.log("Successfully updated");
-                    window.alert("Successfully updated");
-                    document.getElementById("name").innerHTML = document.getElementById('inputName').value;
-                })
-                .catch(function(error) {
-                    console.log("Error in updating data: " + error);
-                });
-            }
-
-            
-
-
-        })
-        .catch(function(error) {
-            console.log(`Error getting data: ${error}`);
-        });
+            })
+            .catch(function (error) {
+                console.log(`Error getting data: ${error}`);
+            });
     });
 }
-

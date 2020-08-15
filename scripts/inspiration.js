@@ -1,3 +1,5 @@
+//==== Retrieves and displays inpiration data from database ====
+
 function showPosts() {
 
     db.collection("inspiration")
@@ -6,8 +8,6 @@ function showPosts() {
         querySnapshot.forEach(function(doc) {
        
             let myDoc = doc.data();
-            console.log(myDoc);
-            console.log("Caption: " + `${myDoc.caption}`);
 
             db.collection("users").doc("23J28qSTVUXerN8iAigpTBQgtu83")
             .get()

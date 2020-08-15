@@ -1,13 +1,8 @@
 // show individual exercise
 
-console.log("i m in individual exercise page");
 var myDoc = decodeURIComponent(window.location.search); 
-console.log(myDoc);
 
 myDoc = myDoc.substring(12);
-console.log("Individual document id: " + myDoc);                         // right
-
-
 
 function showIndividualEx() {
 
@@ -15,7 +10,6 @@ function showIndividualEx() {
     .get()
     .then(function(doc) {
         let exDoc = doc.data();
-        console.log(exDoc);
 
         let myHtml =
         `

@@ -63,8 +63,6 @@ function initMap() {
         navigator.geolocation.getCurrentPosition(function (position) {
             lati = position.coords.latitude;
             longi = position.coords.longitude;
-            console.log("Latitude: " + lati);
-            console.log("Longitude: " + longi);
 
             pos = {
                 lat: lati,
@@ -129,7 +127,7 @@ function callback(results, status) {
 }
 
 function createMarker(place) {
-    console.log("in create marker");
+
     var placeLoc = place.geometry.location;
     var marker = new google.maps.Marker({
         map: map,

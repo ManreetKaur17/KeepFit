@@ -1,14 +1,11 @@
 // show exercises
 
-console.log("i m in exercise page");
+
 var stru = decodeURIComponent(window.location.search); 
-console.log("Struu:" + stru);
 
 var category = stru.substring(10);
-console.log(category);                         // right
 
 categoryFinal = category.substring(0, 1).toUpperCase() + category.substring(1);
-console.log(categoryFinal); 
 
 $('#categoryDiv').append(`<h2>${categoryFinal} category</h2>`);
 
@@ -16,10 +13,8 @@ db.collection("exercises").where("category", "==", category)
 .get()
 .then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
-        console.log(doc.id);
+        
         let myDoc = doc.data();
-        console.log(myDoc);
-        console.log("Name: " + `${myDoc.name}`);
 
         let myHtml = `
         <a href="individualEx.html?individual=${doc.id}">

@@ -1,19 +1,15 @@
+//==== Calculates and displays BMI 
+
 function calculateBMI() {
-    console.log("in BMI");
 
     let weight = document.getElementById("inputWeight").value;
     let height = document.getElementById("inputHeight").value;
 
-    console.log("Weight = " + weight);
-    console.log("Height = " + height);
-
     if (weight == "" || height == "") {
         window.alert("Please enter weight and height");
     } else {
-        console.log("Calculating BMI");
         let bmi = weight / (height * height);
         bmi = bmi.toFixed(1);
-        console.log("BMI = " + bmi);
 
         let range;
 
@@ -32,9 +28,7 @@ function calculateBMI() {
             <h5>This is considered <b>${range}</b>.</h5>
         `;
 
-   //     $('#answer').append(myAns);
         document.getElementById("answer").innerHTML = myAns;
 
-      //  document.getElementById("myForm").reset();
     }
 }
