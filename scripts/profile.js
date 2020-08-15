@@ -137,11 +137,11 @@ function showProfile() {
                 myGender = "other";
             }
 
-            let pTrainer = "no";
+        /*    let pTrainer = "no";
             if(document.getElementById('trainer').checked == true) {
                 console.log("Trainer yes");
                 pTrainer = "yes";
-            }
+            }   */
 
                 console.log("in updateFun");
                 db.collection("users").doc(user.uid)
@@ -152,11 +152,12 @@ function showProfile() {
                     height: document.getElementById('inputHeight').value,
                     weight: document.getElementById('inputWeight').value,
                     gender: `${myGender}`,
-                    personalTrainer: `${pTrainer}`
+                 //   personalTrainer: `${pTrainer}`
                 })
                 .then(function() {
                     console.log("Successfully updated");
                     window.alert("Successfully updated");
+                    document.getElementById("name").innerHTML = document.getElementById('inputName').value;
                 })
                 .catch(function(error) {
                     console.log("Error in updating data: " + error);
